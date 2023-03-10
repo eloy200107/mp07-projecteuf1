@@ -9,7 +9,7 @@ $usuaris = ["marato" => "marato",
 if (!isset($_POST['username']) || !isset($_POST['password'])) {
     $missatge= "Variables formulari no existeixen";
     $_SESSION['missatge'] = $missatge;
-    header("Location: index.php");
+    header("Location: prova.php");
     exit;
 }
     $username = $_POST['username'];
@@ -18,14 +18,14 @@ if (!isset($_POST['username']) || !isset($_POST['password'])) {
     if (!isset($usuaris[$username])) {
         $missatge= "L'usuari no existeix"; 
         $_SESSION['missatge'] = $missatge;
-    header("Location: index.php");
+    header("Location: prova.php");
         exit;
     }
     
     if ($usuaris[$username]!=$password) {
         $missatge= "El password és incorrecte";
          $_SESSION['missatge'] = $missatge;
-         header("Location: index.php");
+         header("Location: prova.php");
         exit;
         
     }
@@ -35,7 +35,7 @@ if (!isset($_POST['username']) || !isset($_POST['password'])) {
     
         if ($usuaris[$username]==$password) {
             echo "tot ok";
-             header("Location: index.php");
+             header("Location: prova.php");
              exit;
             
         }
