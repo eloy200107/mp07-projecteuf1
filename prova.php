@@ -1,7 +1,7 @@
 <?php
-include 'connectar.php';
 
-echo 'Hola que tal';
+require_once 'connectar.php';
+
 ?>
 <form action="pagament_incripció.php" method="post">
  <p>Nom: <input type="text" name="nom" /></p>
