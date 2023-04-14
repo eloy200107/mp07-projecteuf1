@@ -1,7 +1,8 @@
 <?php
+
 echo 'Efectuar pagament';
 ?>
-<form action="pagament_incripció.php" method="post">
+<form action="compra_realitzada.php" method="post">
     <br>
     <br>
     <br>
@@ -14,6 +15,15 @@ echo 'Efectuar pagament';
 </label>
     <p><input type="submit" value="Realitzar Inscripció"></p>
 
+
+
+
+
+
+
+
+
+ 
 
 
 </form>
