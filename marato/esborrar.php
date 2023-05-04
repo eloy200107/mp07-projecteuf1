@@ -2,8 +2,8 @@
 include 'connectar.php';
 
 if(isset($_GET['DNI'])) {
-    $dni = $_GET['DNI'];
-    $sql = "DELETE FROM inscripcio WHERE DNI='$dni'";
+    $dnis = $_GET['DNI'];
+    $sql = "DELETE FROM inscripcio WHERE DNI='$dnis'";
     if(mysqli_query($bd, $sql)) {
         header("location: inscrits.php");
         exit();

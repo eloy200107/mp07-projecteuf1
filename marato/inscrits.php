@@ -31,9 +31,9 @@ echo "<thead>";
 echo "<tr>";
 echo "<th scope='col'>DNI</th>"; 
 echo "<th scope='col'>Nom</th>"; 
-echo "<th scope='col'>id_club</th>"; 
+echo "<th scope='col'>Club</th>"; 
 echo "<th scope='col'>Edat</th>"; 
-echo "<th scope='col'>id_recorregut</th>"; 
+echo "<th scope='col'>Recorregut</th>"; 
 echo "<th scope='col'>Cognoms</th>";
 if ($admin) {
     echo "<th scope='col'>Esborrar</th>";

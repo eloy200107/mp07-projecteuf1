@@ -1,9 +1,9 @@
 <?php
 include 'connectar.php';
 
-if(isset($_GET['id'])) {
-    $id = $_GET['id'];
-    $sql = "DELETE FROM classificacio WHERE id_recorregut='$id'";
+if(isset($_GET['dni'])) {
+    $dni = $_GET['dni'];
+    $sql = "DELETE FROM classificacio WHERE dni='$dni'";
     if(mysqli_query($bd, $sql)) {
         header("location: classificacio.php");
         exit();
