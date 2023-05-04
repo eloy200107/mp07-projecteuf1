@@ -54,4 +54,7 @@ Per l'usuari marató seria igual pero nomes podria realitzar la inscripció fent
 
 CONCLUSIÓ
 
+Com a conclusió treiem que ha estat un projecte una mica mes fàcil que el del caixer i força interesant degut a que teniem un tema força interesant ja que era un tema que dominaba i hem tret un resultat el qual hem pogut aprendre a programar en php  amb mes facilitat,i crec que hem tret un resultat bastant acceptable,aixi que estem satisfets amb el resultat.
+
+
 
