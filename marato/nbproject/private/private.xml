@@ -3,14 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/opt/lampp/htdocs/marato/classificacio.php</file>
-            <file>file:/opt/lampp/htdocs/marato/esborrar_classificacio.php</file>
-            <file>file:/opt/lampp/htdocs/marato/inscrits.php</file>
-            <file>file:/opt/lampp/htdocs/marato/esborrar.php</file>
+            <file>file:/opt/lampp/htdocs/marato/club.php</file>
+            <file>file:/opt/lampp/htdocs/marato/guardar_nou_club.php</file>
+            <file>file:/opt/lampp/htdocs/marato/editar_club.php</file>
             <file>file:/opt/lampp/htdocs/marato/editar_classificacio.php</file>
             <file>file:/opt/lampp/htdocs/marato/guardar_edicio.php</file>
-            <file>file:/opt/lampp/htdocs/marato/index.php</file>
-            <file>file:/opt/lampp/htdocs/marato/login.php</file>
+            <file>file:/opt/lampp/htdocs/marato/guardar_edicio_club.php</file>
+            <file>file:/opt/lampp/htdocs/marato/nou_club.php</file>
+            <file>file:/opt/lampp/htdocs/marato/menu.php</file>
             <file>file:/opt/lampp/htdocs/marato/prova.php</file>
         </group>
     </open-files>

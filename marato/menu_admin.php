@@ -15,6 +15,9 @@
           <a class="nav-link" href="prova.php">Inscribir</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="club.php">Clubs</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="index.php">Sortir</a>
         </li>
       </ul>

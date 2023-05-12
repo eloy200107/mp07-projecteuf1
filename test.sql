@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Temps de generació: 04-05-2023 a les 13:28:31
+-- Temps de generació: 12-05-2023 a les 14:04:39
 -- Versió del servidor: 10.4.24-MariaDB
 -- Versió de PHP: 7.4.29
 
@@ -43,8 +43,8 @@ CREATE TABLE `classificacio` (
 --
 
 INSERT INTO `classificacio` (`Nom`, `cognoms`, `temps_total`, `ritme_km`, `nom_club`, `edat`, `id_recorregut`, `dni`) VALUES
-('Eloi', 'Blasco', '212', '2', 'Nastic', 12, 'llarg', '12345678A'),
-('Santi', 'Crespo Gomez', '12', '12', 'LA CANONJA', 18, 'mig', '12345678B');
+('Santi', 'Crespo Gomez', '01:12:14', '2', 'Sesga Runners', 19, 'Llarg', '49651131L'),
+('Eloi', 'Blasco Tortajada', '04:12:14', '21', 'Sesga Runners', 21, 'Curt', '70665507P');
 
 -- --------------------------------------------------------
 
@@ -63,14 +63,15 @@ CREATE TABLE `club` (
 --
 
 INSERT INTO `club` (`id_club`, `Nom`, `participants`) VALUES
-(156124, 'Unicaja Atletismo', '0'),
-(356478, 'Cornella', '1'),
-(543787, 'Nastic', '1'),
-(567213, 'New Balance Team', '0'),
-(654234, 'FCB Atletisme', '0'),
-(736702, 'Athletic Track Tarragona', '0'),
-(784125, 'CA  ADIDAS', '0'),
-(937125, 'Nike Running', '0');
+(1, 'Unicaja Atletismo', '0'),
+(2, 'Cornella', '0'),
+(3, 'Nastic', '0'),
+(4, 'New Balance Team', '0'),
+(5, 'FCB Atletisme', '0'),
+(6, 'Athletic Track Tarragona', '0'),
+(7, 'CA  ADIDAS', '0'),
+(8, 'Nike Running', '0'),
+(9, 'Sesga Runners', '2');
 
 -- --------------------------------------------------------
 
@@ -92,8 +93,8 @@ CREATE TABLE `inscripcio` (
 --
 
 INSERT INTO `inscripcio` (`DNI`, `Nom`, `id_club`, `edat`, `id_recorregut`, `cognoms`) VALUES
-('12345678A', 'Eloi', 'Nastic', 12, 'llarg', 'Blasco'),
-('12345678B', 'Santi', 'LA CANONJA', 18, 'mig', 'Crespo Gomez');
+('49651131L', 'Santi', 'Sesga Runners', 19, 'Llarg', 'Crespo Gomez'),
+('70665507P', 'Eloi', 'Sesga Runners', 21, 'Curt', 'Blasco Tortajada');
 
 --
 -- Disparadors `inscripcio`
@@ -138,17 +139,18 @@ CREATE TABLE `recorregut` (
   `id_recorregut` int(6) NOT NULL,
   `distancia` varchar(20) NOT NULL,
   `desnivell` varchar(20) NOT NULL,
-  `dificultat` varchar(20) NOT NULL
+  `dificultat` varchar(20) NOT NULL,
+  `tipus` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Bolcament de dades per a la taula `recorregut`
 --
 
-INSERT INTO `recorregut` (`id_recorregut`, `distancia`, `desnivell`, `dificultat`) VALUES
-(467987, '42km', '150', 'alta'),
-(651234, '10km', '235', 'mitjana'),
-(657896, '30km', '134', 'mitjana');
+INSERT INTO `recorregut` (`id_recorregut`, `distancia`, `desnivell`, `dificultat`, `tipus`) VALUES
+(467987, '42km', '150', 'alta', 'Llarg'),
+(651234, '10km', '235', 'mitjana', 'Curt'),
+(657896, '30km', '134', 'mitjana', 'Mig');
 
 -- --------------------------------------------------------
 
@@ -161,21 +163,24 @@ CREATE TABLE `usuaris` (
   `Nom` varchar(20) NOT NULL,
   `cognoms` varchar(20) NOT NULL,
   `edat` int(3) NOT NULL,
-  `id_club` int(6) NOT NULL
+  `id_club` int(6) NOT NULL,
+  `user` varchar(10) DEFAULT NULL,
+  `password` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Bolcament de dades per a la taula `usuaris`
 --
 
-INSERT INTO `usuaris` (`DNI`, `Nom`, `cognoms`, `edat`, `id_club`) VALUES
-('36076897V', 'Javier', 'Guerra Polo', 39, 784125),
-('65410499V', 'Ayad', 'Lamdassem', 41, 736702),
-('70665507P', 'Jon', 'Echevarria Jimenez', 25, 156124),
-('X1182169S', 'Birhanu', 'Legese', 28, 567213),
-('X2081402V', 'Kenenisa', 'Bekele', 40, 784125),
-('X3270918L', 'Suguru', 'Osako', 31, 654234),
-('Y9868244Q', 'Kelvin', 'Kiptum', 23, 937125);
+INSERT INTO `usuaris` (`DNI`, `Nom`, `cognoms`, `edat`, `id_club`, `user`, `password`) VALUES
+('00000000A', 'Admin', 'Admin', 0, 156124, 'admin', 'admin'),
+('36076897V', 'Javier', 'Guerra Polo', 39, 784125, 'User1', 'pass'),
+('65410499V', 'Ayad', 'Lamdassem', 41, 736702, 'User2', 'pass'),
+('70665507P', 'Jon', 'Echevarria Jimenez', 25, 156124, 'User3', 'pass'),
+('X1182169S', 'Birhanu', 'Legese', 28, 567213, 'User4', 'pass'),
+('X2081402V', 'Kenenisa', 'Bekele', 40, 784125, 'User5', 'pass'),
+('X3270918L', 'Suguru', 'Osako', 31, 654234, 'User6', 'pass'),
+('Y9868244Q', 'Kelvin', 'Kiptum', 23, 937125, 'User7', 'pass');
 
 --
 -- Índexs per a les taules bolcades
